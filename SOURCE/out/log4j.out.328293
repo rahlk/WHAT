@@ -1,0 +1,40 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2d1-14>
+Subject: Job 328293: <tcsh save log4j 7064> Done
+
+Job <tcsh save log4j 7064> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <2*n2d1-14>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <1*n2d1-13>
+                            <1*n2d1-10>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Mon Mar 30 21:52:09 2015
+Results reported at Mon Mar 30 22:54:27 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save log4j 7064
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   3714.66 sec.
+    Max Memory :        92 MB
+    Max Swap   :       712 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/log4j.err.328293> for stderr output of this job.
+

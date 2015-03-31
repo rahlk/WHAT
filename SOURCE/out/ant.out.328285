@@ -1,0 +1,40 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c3-2>
+Subject: Job 328285: <tcsh save ant 19275> Done
+
+Job <tcsh save ant 19275> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <1*n2c3-2>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <2*n2c3-14>
+                            <1*n2c3-3>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Mon Mar 30 21:51:19 2015
+Results reported at Tue Mar 31 02:05:55 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save ant 19275
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :  15231.40 sec.
+    Max Memory :        96 MB
+    Max Swap   :       717 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/ant.err.328285> for stderr output of this job.
+
