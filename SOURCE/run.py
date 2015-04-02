@@ -153,7 +153,7 @@ def _test(file):
   R = run(
       dataName=file,
       extent=0.00,
-      reps=12,
+      reps=24,
       fSelect=False,
       Prune=False,
       infoPrune=None).go()
@@ -164,7 +164,7 @@ def _test(file):
   R = run(
       dataName=file,
       extent=0.25,
-      reps=12,
+      reps=24,
       fSelect=False,
       Prune=False,
       infoPrune=None).go()
@@ -172,7 +172,7 @@ def _test(file):
   R = run(
       dataName=file,
       extent=0.50,
-      reps=12,
+      reps=24,
       fSelect=False,
       Prune=False,
       infoPrune=None).go()
@@ -180,7 +180,7 @@ def _test(file):
   R = run(
       dataName=file,
       extent=0.75,
-      reps=12,
+      reps=24,
       fSelect=False,
       Prune=False,
       infoPrune=None).go()
@@ -191,21 +191,21 @@ def _test(file):
   R = run(
       dataName=file,
       extent=0.25,
-      reps=12,
+      reps=24,
       fSelect=True,
       Prune=False,
       infoPrune=None).go()
   R = run(
       dataName=file,
       extent=0.50,
-      reps=12,
+      reps=24,
       fSelect=True,
       Prune=False,
       infoPrune=None).go()
   R = run(
       dataName=file,
       extent=0.75,
-      reps=12,
+      reps=24,
       fSelect=True,
       Prune=False,
       infoPrune=None).go()
@@ -216,7 +216,7 @@ def _test(file):
   R = run(
       dataName=file,
       extent=0.25,
-      reps=12,
+      reps=24,
       fSelect=True,
       Prune=True,
       infoPrune=0.5).go()
@@ -224,7 +224,7 @@ def _test(file):
   R = run(
       dataName=file,
       extent=0.50,
-      reps=12,
+      reps=24,
       fSelect=True,
       Prune=True,
       infoPrune=0.50).go()
@@ -232,7 +232,7 @@ def _test(file):
   R = run(
       dataName=file,
       extent=0.75,
-      reps=12,
+      reps=24,
       fSelect=True,
       Prune=True,
       infoPrune=0.5).go()
