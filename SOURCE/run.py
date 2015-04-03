@@ -32,7 +32,7 @@ class run():
 
   def __init__(
           self,
-          pred=CART,
+          pred=rforest,
           _smoteit=True,
           _n=-1,
           _tuneit=False,
@@ -84,7 +84,7 @@ class run():
 
     for _ in xrange(self.reps):
       predRows = []
-      train_DF = createTbl(self.train[self._n], isBin=True)
+      train_DF = createTbl(self.train[self._n][-2:], isBin=True)
       test_df = createTbl(self.test[self._n], isBin=True)
       actual = Bugs(test_df)
       before = self.pred(train_DF, test_df,
