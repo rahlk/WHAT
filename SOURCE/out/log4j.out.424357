@@ -1,0 +1,39 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2e4-7>
+Subject: Job 424357: <tcsh save log4j 250> Done
+
+Job <tcsh save log4j 250> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <2*n2e4-7>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <2*n2e4-1>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Fri Apr  3 15:32:59 2015
+Results reported at Fri Apr  3 16:39:46 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save log4j 250
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   3977.91 sec.
+    Max Memory :        92 MB
+    Max Swap   :       712 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/log4j.err.424357> for stderr output of this job.
+

@@ -1,0 +1,39 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2e5-4>
+Subject: Job 424353: <tcsh save jedit 3432> Done
+
+Job <tcsh save jedit 3432> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <2*n2e5-4>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <2*n2e5-6>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Fri Apr  3 15:32:44 2015
+Results reported at Fri Apr  3 19:49:38 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save jedit 3432
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :  15367.08 sec.
+    Max Memory :        98 MB
+    Max Swap   :       718 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/jedit.err.424353> for stderr output of this job.
+
