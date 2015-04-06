@@ -1,28 +1,28 @@
 
 ------------------------------------------------------------
-Sender: LSF System <lsfadmin@n2c3-7>
-Subject: Job 424359: <tcsh save velocity 2947> Done
+Sender: LSF System <lsfadmin@n2e1-13>
+Subject: Job 446739: <tcsh save ivy 19099> Done
 
-Job <tcsh save velocity 2947> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
-Job was executed on host(s) <4*n2c3-7>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+Job <tcsh save ivy 19099> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <4*n2e1-13>, in queue <long>, as user <rkrish11> in cluster <henry2>.
 </home/rkrish11> was used as the home directory.
 </home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
-Started at Fri Apr  3 15:33:15 2015
-Results reported at Fri Apr  3 16:47:35 2015
+Started at Sun Apr  5 19:45:42 2015
+Results reported at Sun Apr  5 20:55:56 2015
 
 Your job looked like:
 
 ------------------------------------------------------------
 # LSBATCH: User input
-tcsh save velocity 2947
+tcsh save ivy 19099
 ------------------------------------------------------------
 
 Successfully completed.
 
 Resource usage summary:
 
-    CPU time   :   4431.77 sec.
-    Max Memory :        94 MB
+    CPU time   :   4163.52 sec.
+    Max Memory :        95 MB
     Max Swap   :       715 MB
 
     Max Processes  :         4
@@ -34,5 +34,5 @@ The output (if any) is above this job summary.
 
 PS:
 
-Read file <./err/velocity.err.424359> for stderr output of this job.
+Read file <./err/ivy.err.446739> for stderr output of this job.
 

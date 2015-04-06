@@ -1,28 +1,29 @@
 
 ------------------------------------------------------------
-Sender: LSF System <lsfadmin@n2e5-4>
-Subject: Job 424353: <tcsh save jedit 3432> Done
+Sender: LSF System <lsfadmin@n2c1-9>
+Subject: Job 446736: <tcsh save ant 844> Done
 
-Job <tcsh save jedit 3432> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
-Job was executed on host(s) <2*n2e5-4>, in queue <long>, as user <rkrish11> in cluster <henry2>.
-                            <2*n2e5-6>
+Job <tcsh save ant 844> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <2*n2c1-9>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <1*n2c1-11>
+                            <1*n2c1-13>
 </home/rkrish11> was used as the home directory.
 </home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
-Started at Fri Apr  3 15:32:44 2015
-Results reported at Fri Apr  3 19:49:38 2015
+Started at Sun Apr  5 19:45:42 2015
+Results reported at Sun Apr  5 22:51:54 2015
 
 Your job looked like:
 
 ------------------------------------------------------------
 # LSBATCH: User input
-tcsh save jedit 3432
+tcsh save ant 844
 ------------------------------------------------------------
 
 Successfully completed.
 
 Resource usage summary:
 
-    CPU time   :  15367.08 sec.
+    CPU time   :  11118.92 sec.
     Max Memory :        98 MB
     Max Swap   :       718 MB
 
@@ -35,5 +36,5 @@ The output (if any) is above this job summary.
 
 PS:
 
-Read file <./err/jedit.err.424353> for stderr output of this job.
+Read file <./err/ant.err.446736> for stderr output of this job.
 

@@ -1,28 +1,28 @@
 
 ------------------------------------------------------------
-Sender: LSF System <lsfadmin@n2c3-9>
-Subject: Job 424349: <tcsh save ant 7709> Done
+Sender: LSF System <lsfadmin@n2e1-5>
+Subject: Job 446741: <tcsh save poi 7271> Done
 
-Job <tcsh save ant 7709> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
-Job was executed on host(s) <4*n2c3-9>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+Job <tcsh save poi 7271> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <4*n2e1-5>, in queue <long>, as user <rkrish11> in cluster <henry2>.
 </home/rkrish11> was used as the home directory.
 </home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
-Started at Fri Apr  3 15:32:44 2015
-Results reported at Fri Apr  3 18:08:33 2015
+Started at Sun Apr  5 19:45:42 2015
+Results reported at Sun Apr  5 23:04:33 2015
 
 Your job looked like:
 
 ------------------------------------------------------------
 # LSBATCH: User input
-tcsh save ant 7709
+tcsh save poi 7271
 ------------------------------------------------------------
 
 Successfully completed.
 
 Resource usage summary:
 
-    CPU time   :   9303.76 sec.
-    Max Memory :        97 MB
+    CPU time   :  11877.16 sec.
+    Max Memory :        98 MB
     Max Swap   :       718 MB
 
     Max Processes  :         4
@@ -34,5 +34,5 @@ The output (if any) is above this job summary.
 
 PS:
 
-Read file <./err/ant.err.424349> for stderr output of this job.
+Read file <./err/poi.err.446741> for stderr output of this job.
 

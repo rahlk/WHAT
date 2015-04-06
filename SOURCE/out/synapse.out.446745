@@ -1,28 +1,27 @@
 
 ------------------------------------------------------------
-Sender: LSF System <lsfadmin@n2c3-4>
-Subject: Job 424355: <tcsh save lucene 14347> Done
+Sender: LSF System <lsfadmin@n2c1-13>
+Subject: Job 446745: <tcsh save synapse 17360> Done
 
-Job <tcsh save lucene 14347> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
-Job was executed on host(s) <3*n2c3-4>, in queue <long>, as user <rkrish11> in cluster <henry2>.
-                            <1*n2c3-10>
+Job <tcsh save synapse 17360> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <4*n2c1-13>, in queue <long>, as user <rkrish11> in cluster <henry2>.
 </home/rkrish11> was used as the home directory.
 </home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
-Started at Fri Apr  3 15:32:51 2015
-Results reported at Fri Apr  3 17:00:13 2015
+Started at Sun Apr  5 19:46:13 2015
+Results reported at Sun Apr  5 20:59:55 2015
 
 Your job looked like:
 
 ------------------------------------------------------------
 # LSBATCH: User input
-tcsh save lucene 14347
+tcsh save synapse 17360
 ------------------------------------------------------------
 
 Successfully completed.
 
 Resource usage summary:
 
-    CPU time   :   5111.07 sec.
+    CPU time   :   3955.85 sec.
     Max Memory :        94 MB
     Max Swap   :       714 MB
 
@@ -35,5 +34,5 @@ The output (if any) is above this job summary.
 
 PS:
 
-Read file <./err/lucene.err.424355> for stderr output of this job.
+Read file <./err/synapse.err.446745> for stderr output of this job.
 
