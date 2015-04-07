@@ -37,7 +37,7 @@ class type1():
     \usepackage{bigstrut}
     \usepackage[table]{xcolor}
     \usepackage{picture}
-    \newcommand{\quart}[4]{\begin{picture}(100,6)
+    \newcommand{\quart}[4]{\begin{picture}(50,6)
     {\color{black}\put(#3,3){\circle*{4}}\put(#1,3){\line(1,0){#2}}}\end{picture}}
     \begin{document}
     """)
@@ -100,7 +100,7 @@ class type2():
     rdivDemo(lst, isLatex=True)
 
   def log2list(self):
-    dir = './log'
+    dir = './log2'
     self.printHeader()
     files = [filenames for (
         dirpath,
