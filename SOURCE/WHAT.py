@@ -1,20 +1,13 @@
 #! /Users/rkrsn/miniconda/bin/python
-from __future__ import print_function
 from __future__ import division
+from __future__ import print_function
+
 from os import environ
 from os import getcwd
 from pdb import set_trace
-from weights import weights as W
-from random import uniform as rand
 from random import randint as randi
+from random import uniform as rand
 import sys
-
-# Update PYTHONPATH
-HOME = environ['HOME']
-axe = HOME + '/git/axe/axe/'  # AXE
-pystat = HOME + '/git/pystat/'  # PySTAT
-cwd = getcwd()  # Current Directory
-sys.path.extend([axe, pystat, cwd])
 
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.ensemble import RandomForestClassifier
@@ -23,17 +16,28 @@ from sklearn.tree import DecisionTreeClassifier
 
 from Prediction import *
 from _imports import *
-# from abcd import _Abcd
 from cliffsDelta import *
 from contrastset import *
-# from dectree import *
+from counts import *
 from hist import *
-from smote import *
-import makeAmodel as mam
 from methods1 import *
+from smote import *
+from weights import weights as W
+import makeAmodel as mam
 import numpy as np
 import pandas as pd
-from counts import *
+
+
+# Update PYTHONPATH
+HOME = environ['HOME']
+axe = HOME + '/git/axe/axe/'  # AXE
+pystat = HOME + '/git/pystat/'  # PySTAT
+cwd = getcwd()  # Current Directory
+sys.path.extend([axe, pystat, cwd])
+
+
+# from abcd import _Abcd
+# from dectree import *
 # import sk
 
 
@@ -122,14 +126,14 @@ class treatments():
     return hyperPlanes
 
   def projection(self, node_one, node_two, three):
-    if node_one.score() < node_two.score():
+    if node_one.score() > node_two.score():
       one, two = node_one, node_two
     else:
       one, two = node_two, node_one
     plane = [b - a for a, b in zip(one.representative(), two.representative())]
     norm = np.linalg.norm(plane)
     unitVect = [p / norm for p in plane]
-    proj = np.dot(three, unitVect)
+    proj = np.dot(np.array(three) - np.array(one.representative()), unitVect)
     return proj
 
   def fWeight(self, criterion='Variance'):

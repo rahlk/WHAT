@@ -17,31 +17,31 @@
   \begin{subtable}{0.45\linewidth}
   {\scriptsize\begin{tabular}{clccc}
       \rowcolor{Gray} \textbf{Rank} & \textbf{Treatment} & \textbf{Med} & \textbf{IQR} & \\
-      1 &     ant\_Base &    0.03  &  0.0 & \quart{0}{0}{0}{62} \\
-      \hline  2 & ant\_0.25\_w\_iP(50\%) &    0.15  &  0.09 & \quart{4}{6}{7}{62} \\
-      \hline  3 & ant\_0.5\_w\_iP(50\%) &    0.25  &  0.1 & \quart{12}{6}{14}{62} \\
-      \hline  4 &     ant\_0.25 &    0.34  &  0.05 & \quart{18}{4}{20}{62} \\
-      4 &   ant\_0.25\_w &    0.36  &  0.08 & \quart{18}{5}{21}{62} \\
-      4 & ant\_0.75\_w\_iP(50\%) &    0.41  &  0.13 & \quart{21}{8}{24}{62} \\
-      \hline  5 &    ant\_0.5\_w &    0.46  &  0.18 & \quart{24}{12}{27}{62} \\
-      5 &      ant\_0.5 &    0.53  &  0.15 & \quart{27}{10}{32}{62} \\
-      \hline  6 &     ant\_0.75 &    0.64  &  0.17 & \quart{34}{11}{39}{62} \\
-      6 &   ant\_0.75\_w &    0.73  &  0.17 & \quart{38}{11}{45}{62} \\
+      1 &     \_Base &    0.03  &  0.0 & \quart{0}{0}{0}{62} \\
+      \hline  2 & $\alpha=0.25$, Prune=50\% &    0.15  &  0.09 & \quart{4}{6}{7}{62} \\
+      \hline  3 & $\alpha=0.5$, Prune=50\% &    0.25  &  0.1 & \quart{12}{6}{14}{62} \\
+      \hline  4 &     $\alpha=0.25$ &    0.34  &  0.05 & \quart{18}{4}{20}{62} \\
+      4 &   $\alpha=0.25$, weight &    0.36  &  0.08 & \quart{18}{5}{21}{62} \\
+      4 & $\alpha=0.75$, Prune=50\% &    0.41  &  0.13 & \quart{21}{8}{24}{62} \\
+      \hline  5 &    $\alpha=0.5$, weight &    0.46  &  0.18 & \quart{24}{12}{27}{62} \\
+      5 &      $\alpha=0.5$ &    0.53  &  0.15 & \quart{27}{10}{32}{62} \\
+      \hline  6 &     $\alpha=0.75$ &    0.64  &  0.17 & \quart{34}{11}{39}{62} \\
+      6 &   $\alpha=0.75$, weight &    0.73  &  0.17 & \quart{38}{11}{45}{62} \\
       \hline \end{tabular}}
   \end{subtable}\hspace{1cm}
   \begin{subtable}{0.45\linewidth}
   {\scriptsize\begin{tabular}{clccc}
       \rowcolor{Gray} \textbf{Rank} & \textbf{Treatment} & \textbf{Med} & \textbf{IQR} & \\
       1 &   camel\_Base &    0.16  &  0.03 & \quart{0}{3}{1}{111} \\
-      1 &   camel\_0.25 &    0.17  &  0.06 & \quart{0}{7}{2}{111} \\
-      1 & camel\_0.25\_w &    0.17  &  0.06 & \quart{0}{7}{2}{111} \\
-      \hline  2 & camel\_0.25\_w\_iP(50\%) &    0.22  &  0.06 & \quart{5}{8}{9}{111} \\
-      \hline  3 &    camel\_0.5 &    0.25  &  0.1 & \quart{3}{14}{13}{111} \\
-      3 &  camel\_0.5\_w &    0.26  &  0.14 & \quart{7}{19}{14}{111} \\
-      \hline  4 & camel\_0.5\_w\_iP(50\%) &    0.32  &  0.16 & \quart{10}{21}{22}{111} \\
-      \hline  5 & camel\_0.75\_w &    0.38  &  0.19 & \quart{14}{25}{30}{111} \\
-      5 &   camel\_0.75 &    0.4  &  0.12 & \quart{23}{16}{32}{111} \\
-      \hline  6 & camel\_0.75\_w\_iP(50\%) &    0.47  &  0.15 & \quart{30}{19}{42}{111} \\
+      1 &   camel$\alpha=0.25$ &    0.17  &  0.06 & \quart{0}{7}{2}{111} \\
+      1 & camel$\alpha=0.25$, weight &    0.17  &  0.06 & \quart{0}{7}{2}{111} \\
+      \hline  2 & camel$\alpha=0.25$, Prune=50\% &    0.22  &  0.06 & \quart{5}{8}{9}{111} \\
+      \hline  3 &    camel$\alpha=0.5$ &    0.25  &  0.1 & \quart{3}{14}{13}{111} \\
+      3 &  camel$\alpha=0.5$, weight &    0.26  &  0.14 & \quart{7}{19}{14}{111} \\
+      \hline  4 & camel$\alpha=0.5$, Prune=50\% &    0.32  &  0.16 & \quart{10}{21}{22}{111} \\
+      \hline  5 & camel$\alpha=0.75$, weight &    0.38  &  0.19 & \quart{14}{25}{30}{111} \\
+      5 &   camel$\alpha=0.75$ &    0.4  &  0.12 & \quart{23}{16}{32}{111} \\
+      \hline  6 & camel$\alpha=0.75$, Prune=50\% &    0.47  &  0.15 & \quart{30}{19}{42}{111} \\
       \hline \end{tabular}}
 \end{subtable}
 
@@ -49,59 +49,59 @@
   {\scriptsize\begin{tabular}{clccc}
       \rowcolor{Gray} \textbf{Rank} & \textbf{Treatment} & \textbf{Med} & \textbf{IQR} & \\
       1 &     ivy\_Base &    0.06  &  0.0 & \quart{0}{0}{0}{79} \\
-      \hline  2 & ivy\_0.25\_w\_iP(50\%) &    0.14  &  0.04 & \quart{4}{3}{6}{79} \\
-      \hline  3 & ivy\_0.5\_w\_iP(50\%) &    0.2  &  0.06 & \quart{9}{5}{11}{79} \\
-      \hline  4 & ivy\_0.75\_w\_iP(50\%) &    0.27  &  0.14 & \quart{10}{12}{17}{79} \\
-      \hline  5 &     ivy\_0.25 &    0.41  &  0.06 & \quart{27}{5}{29}{79} \\
-      5 &   ivy\_0.25\_w &    0.42  &  0.06 & \quart{27}{6}{30}{79} \\
-      \hline  6 &    ivy\_0.5\_w &    0.55  &  0.11 & \quart{35}{9}{41}{79} \\
-      6 &      ivy\_0.5 &    0.57  &  0.09 & \quart{37}{7}{43}{79} \\
-      \hline  7 &   ivy\_0.75\_w &    0.61  &  0.08 & \quart{42}{7}{46}{79} \\
-      7 &     ivy\_0.75 &    0.62  &  0.04 & \quart{46}{3}{47}{79} \\
+      \hline  2 & ivy$\alpha=0.25$, Prune=50\% &    0.14  &  0.04 & \quart{4}{3}{6}{79} \\
+      \hline  3 & ivy$\alpha=0.5$, Prune=50\% &    0.2  &  0.06 & \quart{9}{5}{11}{79} \\
+      \hline  4 & ivy$\alpha=0.75$, Prune=50\% &    0.27  &  0.14 & \quart{10}{12}{17}{79} \\
+      \hline  5 &     ivy$\alpha=0.25$ &    0.41  &  0.06 & \quart{27}{5}{29}{79} \\
+      5 &   ivy$\alpha=0.25$, weight &    0.42  &  0.06 & \quart{27}{6}{30}{79} \\
+      \hline  6 &    ivy$\alpha=0.5$, weight &    0.55  &  0.11 & \quart{35}{9}{41}{79} \\
+      6 &      ivy$\alpha=0.5$ &    0.57  &  0.09 & \quart{37}{7}{43}{79} \\
+      \hline  7 &   ivy$\alpha=0.75$, weight &    0.61  &  0.08 & \quart{42}{7}{46}{79} \\
+      7 &     ivy$\alpha=0.75$ &    0.62  &  0.04 & \quart{46}{3}{47}{79} \\
       \hline \end{tabular}}
 \end{subtable}\hspace{1cm}\begin{subtable}{0.45\linewidth}
   {\scriptsize\begin{tabular}{clccc}
       \rowcolor{Gray} \textbf{Rank} & \textbf{Treatment} & \textbf{Med} & \textbf{IQR} & \\
       1 &   jed\_Base &    0.05  &  0.0 & \quart{0}{0}{0}{75} \\
-      \hline  2 & jed\_0.25\_w\_iP(50\%) &    0.11  &  0.05 & \quart{2}{4}{4}{75} \\
-      \hline  3 & jed\_0.5\_w\_iP(50\%) &    0.16  &  0.1 & \quart{3}{8}{8}{75} \\
-      \hline  4 &   jed\_0.25 &    0.2  &  0.08 & \quart{10}{6}{11}{75} \\
-      4 & jed\_0.25\_w &    0.21  &  0.1 & \quart{7}{8}{12}{75} \\
-      \hline  5 & jed\_0.75\_w\_iP(50\%) &    0.32  &  0.15 & \quart{15}{11}{21}{75} \\
-      5 &  jed\_0.5\_w &    0.33  &  0.05 & \quart{19}{4}{22}{75} \\
-      5 &    jed\_0.5 &    0.34  &  0.18 & \quart{18}{14}{23}{75} \\
-      \hline  6 &   jed\_0.75 &    0.56  &  0.2 & \quart{27}{16}{40}{75} \\
-      6 & jed\_0.75\_w &    0.56  &  0.26 & \quart{29}{20}{40}{75} \\
+      \hline  2 & jed$\alpha=0.25$, Prune=50\% &    0.11  &  0.05 & \quart{2}{4}{4}{75} \\
+      \hline  3 & jed$\alpha=0.5$, Prune=50\% &    0.16  &  0.1 & \quart{3}{8}{8}{75} \\
+      \hline  4 &   jed$\alpha=0.25$ &    0.2  &  0.08 & \quart{10}{6}{11}{75} \\
+      4 & jed$\alpha=0.25$, weight &    0.21  &  0.1 & \quart{7}{8}{12}{75} \\
+      \hline  5 & jed$\alpha=0.75$, Prune=50\% &    0.32  &  0.15 & \quart{15}{11}{21}{75} \\
+      5 &  jed$\alpha=0.5$, weight &    0.33  &  0.05 & \quart{19}{4}{22}{75} \\
+      5 &    jed$\alpha=0.5$ &    0.34  &  0.18 & \quart{18}{14}{23}{75} \\
+      \hline  6 &   jed$\alpha=0.75$ &    0.56  &  0.2 & \quart{27}{16}{40}{75} \\
+      6 & jed$\alpha=0.75$, weight &    0.56  &  0.26 & \quart{29}{20}{40}{75} \\
       \hline \end{tabular}}
 \end{subtable}
 
 \begin{subtable}{0.45\linewidth}
   {\scriptsize\begin{tabular}{clccc}
       \rowcolor{Gray} \textbf{Rank} & \textbf{Treatment} & \textbf{Med} & \textbf{IQR} & \\
-      1 & log\_0.5\_w\_iP(50\%) &    0.1  &  0.06 & \quart{1}{11}{5}{172} \\
-      1 & log\_0.25\_w\_iP(50\%) &    0.11  &  0.04 & \quart{1}{8}{7}{172} \\
-      1 & log\_0.25\_w &    0.1  &  0.03 & \quart{3}{6}{5}{172} \\
-      1 &  log\_0.5\_w &    0.1  &  0.13 & \quart{0}{24}{5}{172} \\
+      1 & log$\alpha=0.5$, Prune=50\% &    0.1  &  0.06 & \quart{1}{11}{5}{172} \\
+      1 & log$\alpha=0.25$, Prune=50\% &    0.11  &  0.04 & \quart{1}{8}{7}{172} \\
+      1 & log$\alpha=0.25$, weight &    0.1  &  0.03 & \quart{3}{6}{5}{172} \\
+      1 &  log$\alpha=0.5$, weight &    0.1  &  0.13 & \quart{0}{24}{5}{172} \\
       1 &   log\_Base &    0.11  &  0.04 & \quart{0}{7}{7}{172} \\
-      1 &   log\_0.25 &    0.12  &  0.06 & \quart{1}{11}{9}{172} \\
-      \hline  2 &    log\_0.5 &    0.15  &  0.09 & \quart{3}{17}{14}{172} \\
-      2 & log\_0.75\_w\_iP(50\%) &    0.15  &  0.05 & \quart{9}{9}{14}{172} \\
-      2 & log\_0.75\_w &    0.17  &  0.22 & \quart{9}{40}{18}{172} \\
-      2 &   log\_0.75 &    0.22  &  0.16 & \quart{14}{30}{27}{172} \\
+      1 &   log$\alpha=0.25$ &    0.12  &  0.06 & \quart{1}{11}{9}{172} \\
+      \hline  2 &    log$\alpha=0.5$ &    0.15  &  0.09 & \quart{3}{17}{14}{172} \\
+      2 & log$\alpha=0.75$, Prune=50\% &    0.15  &  0.05 & \quart{9}{9}{14}{172} \\
+      2 & log$\alpha=0.75$, weight &    0.17  &  0.22 & \quart{9}{40}{18}{172} \\
+      2 &   log$\alpha=0.75$ &    0.22  &  0.16 & \quart{14}{30}{27}{172} \\
       \hline \end{tabular}}
 \end{subtable}\hspace{1cm}\begin{subtable}{0.45\linewidth}
   {\scriptsize\begin{tabular}{clccc}
       \rowcolor{Gray} \textbf{Rank} & \textbf{Treatment} & \textbf{Med} & \textbf{IQR} & \\
-      1 & luc\_0.25\_w &    0.03  &  0.03 & \quart{0}{4}{1}{148} \\
-      1 &  luc\_0.25 &    0.05  &  0.04 & \quart{1}{6}{4}{148} \\
-      \hline  2 &   luc\_0.5 &    0.09  &  0.09 & \quart{6}{13}{10}{148} \\
-      2 & luc\_0.25\_w\_iP(50\%) &    0.09  &  0.03 & \quart{7}{5}{10}{148} \\
+      1 & luc$\alpha=0.25$, weight &    0.03  &  0.03 & \quart{0}{4}{1}{148} \\
+      1 &  luc$\alpha=0.25$ &    0.05  &  0.04 & \quart{1}{6}{4}{148} \\
+      \hline  2 &   luc$\alpha=0.5$ &    0.09  &  0.09 & \quart{6}{13}{10}{148} \\
+      2 & luc$\alpha=0.25$, Prune=50\% &    0.09  &  0.03 & \quart{7}{5}{10}{148} \\
       2 &  luc\_Base &    0.1  &  0.01 & \quart{10}{2}{12}{148} \\
-      2 & luc\_0.5\_w &    0.14  &  0.06 & \quart{10}{9}{18}{148} \\
-      \hline  3 & luc\_0.5\_w\_iP(50\%) &    0.19  &  0.08 & \quart{21}{12}{25}{148} \\
-      \hline  4 & luc\_0.75\_w &    0.23  &  0.15 & \quart{22}{23}{31}{148} \\
-      4 &  luc\_0.75 &    0.26  &  0.1 & \quart{27}{15}{36}{148} \\
-      4 & luc\_0.75\_w\_iP(50\%) &    0.28  &  0.13 & \quart{30}{19}{39}{148} \\
+      2 & luc$\alpha=0.5$, weight &    0.14  &  0.06 & \quart{10}{9}{18}{148} \\
+      \hline  3 & luc$\alpha=0.5$, Prune=50\% &    0.19  &  0.08 & \quart{21}{12}{25}{148} \\
+      \hline  4 & luc$\alpha=0.75$, weight &    0.23  &  0.15 & \quart{22}{23}{31}{148} \\
+      4 &  luc$\alpha=0.75$ &    0.26  &  0.1 & \quart{27}{15}{36}{148} \\
+      4 & luc$\alpha=0.75$, Prune=50\% &    0.28  &  0.13 & \quart{30}{19}{39}{148} \\
       \hline \end{tabular}}
 \end{subtable}  
   
@@ -109,60 +109,60 @@
   {\scriptsize\begin{tabular}{clccc}
       \rowcolor{Gray} \textbf{Rank} & \textbf{Treatment} & \textbf{Med} & \textbf{IQR} & \\
       1 &  pbe\_Base &    0.0  &  0.0 & \quart{0}{0}{0}{49} \\
-      1 &  pbe\_0.25 &    0.0  &  0.0 & \quart{0}{0}{0}{49} \\
-      1 & pbe\_0.25\_w &    0.0  &  0.0 & \quart{0}{0}{0}{49} \\
-      1 & pbe\_0.25\_w\_iP(50\%) &    0.0  &  0.0 & \quart{0}{0}{0}{49} \\
-      \hline  2 &   pbe\_0.5 &    0.5  &  0.0 & \quart{24}{0}{24}{49} \\
-      2 &  pbe\_0.75 &    0.5  &  0.5 & \quart{24}{25}{24}{49} \\
-      2 & pbe\_0.5\_w &    0.5  &  0.0 & \quart{24}{0}{24}{49} \\
-      2 & pbe\_0.75\_w &    0.5  &  0.5 & \quart{24}{25}{24}{49} \\
-      2 & pbe\_0.5\_w\_iP(50\%) &    0.5  &  0.0 & \quart{24}{0}{24}{49} \\
-      2 & pbe\_0.75\_w\_iP(50\%) &    0.5  &  0.0 & \quart{24}{0}{24}{49} \\
+      1 &  pbe$\alpha=0.25$ &    0.0  &  0.0 & \quart{0}{0}{0}{49} \\
+      1 & pbe$\alpha=0.25$, weight &    0.0  &  0.0 & \quart{0}{0}{0}{49} \\
+      1 & pbe$\alpha=0.25$, Prune=50\% &    0.0  &  0.0 & \quart{0}{0}{0}{49} \\
+      \hline  2 &   pbe$\alpha=0.5$ &    0.5  &  0.0 & \quart{24}{0}{24}{49} \\
+      2 &  pbe$\alpha=0.75$ &    0.5  &  0.5 & \quart{24}{25}{24}{49} \\
+      2 & pbe$\alpha=0.5$, weight &    0.5  &  0.0 & \quart{24}{0}{24}{49} \\
+      2 & pbe$\alpha=0.75$, weight &    0.5  &  0.5 & \quart{24}{25}{24}{49} \\
+      2 & pbe$\alpha=0.5$, Prune=50\% &    0.5  &  0.0 & \quart{24}{0}{24}{49} \\
+      2 & pbe$\alpha=0.75$, Prune=50\% &    0.5  &  0.0 & \quart{24}{0}{24}{49} \\
       \hline \end{tabular}}
   \end{subtable}\hspace{1cm}\begin{subtable}{0.45\linewidth}
   {\scriptsize\begin{tabular}{clccc}
       \rowcolor{Gray} \textbf{Rank} & \textbf{Treatment} & \textbf{Med} & \textbf{IQR} & \\
-      1 & poi\_0.25\_w\_iP(50\%) &    0.09  &  0.15 & \quart{0}{9}{3}{62} \\
+      1 & poi$\alpha=0.25$, Prune=50\% &    0.09  &  0.15 & \quart{0}{9}{3}{62} \\
       1 &     poi\_Base &    0.09  &  0.05 & \quart{2}{3}{3}{62} \\
-      1 & poi\_0.5\_w\_iP(50\%) &    0.12  &  0.13 & \quart{1}{8}{5}{62} \\
-      \hline  2 &     poi\_0.25 &    0.24  &  0.3 & \quart{5}{19}{13}{62} \\
-      2 &   poi\_0.25\_w &    0.25  &  0.32 & \quart{4}{20}{14}{62} \\
-      \hline  3 & poi\_0.75\_w\_iP(50\%) &    0.37  &  0.45 & \quart{4}{29}{21}{62} \\
-      3 &    poi\_0.5\_w &    0.49  &  0.5 & \quart{9}{32}{29}{62} \\
-      \hline  4 &     poi\_0.75 &    0.53  &  0.47 & \quart{16}{30}{32}{62} \\
-      4 &      poi\_0.5 &    0.53  &  0.28 & \quart{18}{18}{32}{62} \\
-      4 &   poi\_0.75\_w &    0.61  &  0.43 & \quart{22}{27}{37}{62} \\
+      1 & poi$\alpha=0.5$, Prune=50\% &    0.12  &  0.13 & \quart{1}{8}{5}{62} \\
+      \hline  2 &     poi$\alpha=0.25$ &    0.24  &  0.3 & \quart{5}{19}{13}{62} \\
+      2 &   poi$\alpha=0.25$, weight &    0.25  &  0.32 & \quart{4}{20}{14}{62} \\
+      \hline  3 & poi$\alpha=0.75$, Prune=50\% &    0.37  &  0.45 & \quart{4}{29}{21}{62} \\
+      3 &    poi$\alpha=0.5$, weight &    0.49  &  0.5 & \quart{9}{32}{29}{62} \\
+      \hline  4 &     poi$\alpha=0.75$ &    0.53  &  0.47 & \quart{16}{30}{32}{62} \\
+      4 &      poi$\alpha=0.5$ &    0.53  &  0.28 & \quart{18}{18}{32}{62} \\
+      4 &   poi$\alpha=0.75$, weight &    0.61  &  0.43 & \quart{22}{27}{37}{62} \\
       \hline \end{tabular}}  
   \end{subtable}
   
 \begin{subtable}{0.45\linewidth}
   {\scriptsize\begin{tabular}{clccc}
       \rowcolor{Gray} \textbf{Rank} & \textbf{Treatment} & \textbf{Med} & \textbf{IQR} & \\
-      1 & vel\_0.25 &    0.08  &  0.03 & \quart{0}{4}{1}{140} \\
-      1 & vel\_0.25\_w &    0.09  &  0.05 & \quart{0}{7}{3}{140} \\
+      1 & vel$\alpha=0.25$ &    0.08  &  0.03 & \quart{0}{4}{1}{140} \\
+      1 & vel$\alpha=0.25$, weight &    0.09  &  0.05 & \quart{0}{7}{3}{140} \\
       \hline  2 & vel\_Base &    0.13  &  0.04 & \quart{6}{6}{9}{140} \\
-      \hline  3 & vel\_0.5 &    0.16  &  0.09 & \quart{9}{13}{13}{140} \\
-      3 & vel\_0.25\_w\_iP(50\%) &    0.17  &  0.04 & \quart{13}{6}{15}{140} \\
-      3 & vel\_0.5\_w &    0.19  &  0.09 & \quart{12}{13}{18}{140} \\
-      \hline  4 & vel\_0.5\_w\_iP(50\%) &    0.22  &  0.11 & \quart{15}{16}{22}{140} \\
-      4 & vel\_0.75\_w &    0.25  &  0.1 & \quart{19}{15}{27}{140} \\
-      4 & vel\_0.75 &    0.28  &  0.2 & \quart{19}{30}{31}{140} \\
-      4 & vel\_0.75\_w\_iP(50\%) &    0.28  &  0.09 & \quart{24}{13}{31}{140} \\
+      \hline  3 & vel$\alpha=0.5$ &    0.16  &  0.09 & \quart{9}{13}{13}{140} \\
+      3 & vel$\alpha=0.25$, Prune=50\% &    0.17  &  0.04 & \quart{13}{6}{15}{140} \\
+      3 & vel$\alpha=0.5$, weight &    0.19  &  0.09 & \quart{12}{13}{18}{140} \\
+      \hline  4 & vel$\alpha=0.5$, Prune=50\% &    0.22  &  0.11 & \quart{15}{16}{22}{140} \\
+      4 & vel$\alpha=0.75$, weight &    0.25  &  0.1 & \quart{19}{15}{27}{140} \\
+      4 & vel$\alpha=0.75$ &    0.28  &  0.2 & \quart{19}{30}{31}{140} \\
+      4 & vel$\alpha=0.75$, Prune=50\% &    0.28  &  0.09 & \quart{24}{13}{31}{140} \\
       \hline \end{tabular}}
 \end{subtable}\hspace{1cm}
 \begin{subtable}{0.45\linewidth} 
   {\scriptsize\begin{tabular}{clccc}
       \rowcolor{Gray} \textbf{Rank} & \textbf{Treatment} & \textbf{Med} & \textbf{IQR} & \\
-      1 & xal\_0.75\_w &    0.31  &  0.14 & \quart{0}{31}{13}{170} \\
-      1 & xal\_0.25\_w &    0.32  &  0.1 & \quart{2}{22}{15}{170} \\
-      1 &   xal\_0.25 &    0.32  &  0.06 & \quart{13}{14}{15}{170} \\
-      \hline  2 &    xal\_0.5 &    0.34  &  0.11 & \quart{6}{25}{20}{170} \\
+      1 & xal$\alpha=0.75$, weight &    0.31  &  0.14 & \quart{0}{31}{13}{170} \\
+      1 & xal$\alpha=0.25$, weight &    0.32  &  0.1 & \quart{2}{22}{15}{170} \\
+      1 &   xal$\alpha=0.25$ &    0.32  &  0.06 & \quart{13}{14}{15}{170} \\
+      \hline  2 &    xal$\alpha=0.5$ &    0.34  &  0.11 & \quart{6}{25}{20}{170} \\
       2 &   xal\_Base &    0.36  &  0.13 & \quart{4}{30}{24}{170} \\
-      2 &  xal\_0.5\_w &    0.35  &  0.12 & \quart{6}{28}{22}{170} \\
-      2 & xal\_0.5\_w\_iP(50\%) &    0.36  &  0.12 & \quart{11}{27}{24}{170} \\
-      2 & xal\_0.25\_w\_iP(50\%) &    0.38  &  0.1 & \quart{13}{23}{29}{170} \\
-      2 & xal\_0.75\_w\_iP(50\%) &    0.37  &  0.21 & \quart{2}{47}{27}{170} \\
-      2 &   xal\_0.75 &    0.38  &  0.17 & \quart{6}{39}{29}{170} \\
+      2 &  xal$\alpha=0.5$, weight &    0.35  &  0.12 & \quart{6}{28}{22}{170} \\
+      2 & xal$\alpha=0.5$, Prune=50\% &    0.36  &  0.12 & \quart{11}{27}{24}{170} \\
+      2 & xal$\alpha=0.25$, Prune=50\% &    0.38  &  0.1 & \quart{13}{23}{29}{170} \\
+      2 & xal$\alpha=0.75$, Prune=50\% &    0.37  &  0.21 & \quart{2}{47}{27}{170} \\
+      2 &   xal$\alpha=0.75$ &    0.38  &  0.17 & \quart{6}{39}{29}{170} \\
       \hline \end{tabular}}
   \end{subtable}
 \end{table*}  

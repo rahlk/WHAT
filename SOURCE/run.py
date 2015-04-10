@@ -1,6 +1,9 @@
 #! /Users/rkrsn/miniconda/bin/python
 from __future__ import print_function, division
+
 from os import environ, getcwd
+from os import walk
+from pdb import set_trace
 import sys
 
 # Update PYTHONPATH
@@ -10,22 +13,20 @@ pystat = HOME + '/git/pystats/'  # PySTAT
 cwd = getcwd()  # Current Directory
 sys.path.extend([axe, pystat, cwd])
 
-from Prediction import *
 from Planning import *
+from Prediction import *
+from WHAT import treatments as treatments2
 from _imports import *
 from abcd import _Abcd
 from cliffsDelta import cliffs
 from contrastset import *
+from dEvol import tuner
 from dectree import *
+from demos import cmd
 from methods1 import *
+from sk import rdivDemo
 import numpy as np
 import pandas as pd
-from sk import rdivDemo
-from pdb import set_trace
-from dEvol import tuner
-from WHAT import treatments as treatments2
-from os import walk
-from demos import cmd
 
 
 class run():
@@ -36,6 +37,7 @@ class run():
           _smoteit=True,
           _n=-1,
           _tuneit=False,
+
           dataName=None,
           reps=1,
           extent=0.5,
