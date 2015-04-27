@@ -21,11 +21,13 @@ class type1():
     pass
 
   def striplines(self, line):
-    lists = []
     listedline = line[1:-1].strip().split(',')  # split around the = sign
     self.projName = listedline[0][1:-1].strip().split('_')[0]
-    lists.append(listedline[0][1:-1])
-    for ll in listedline[1:]:
+    name = ""
+    for l in listedline[:-24]:
+      name += l
+    lists = [name]
+    for ll in listedline[-24:]:
       lists.append(float(ll))
     return lists
 
@@ -52,7 +54,7 @@ class type1():
     rdivDemo(lst, isLatex=True)
 
   def log2list(self):
-    dir = './log'
+    dir = './log2/'
     self.printHeader()
     files = [filenames for (dirpath, dirnames, filenames) in walk(dir)][0]
     for file in files:
