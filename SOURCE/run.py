@@ -86,7 +86,7 @@ class run():
 
     for _ in xrange(self.reps):
       predRows = []
-      train_DF = createTbl(self.train[self._n][-2:], isBin=True, bugThres=1)
+      train_DF = createTbl(self.train[self._n], isBin=True, bugThres=1)
       test_df = createTbl(self.test[self._n], isBin=True, bugThres=1)
       actual = Bugs(test_df)
       before = self.pred(train_DF, test_df,
@@ -113,7 +113,7 @@ class run():
       else:
         newTab = treatments2(
             train=self.train[
-                self._n],
+              self._n],
             test=self.test[
                 self._n],
             far=False,
@@ -127,23 +127,23 @@ class run():
 
 #       set_trace()
       self.out_pred.append(_Abcd(before=actual, after=before))
-      delta = cliffs(lst1=Bugs(predTest), lst2=after).delta()
+      delta = cliffs(lst2=Bugs(predTest), lst1=after).delta()
       self.out.append(delta)
     if self.extent == 0:
-      append = 'Base'
+      append = 'Baseline'
     else:
       if self.Prune:
         append = str(
-            self.extent) + '_iP(' + str(
-            int(self.infoPrune * 100)) + r'%)' if not self.fSelect else str(
-            self.extent) + '_w_iP(' + str(
-            int(self.infoPrune * 100)) + r'%)'
+            self.extent) + ', iP= ' + str(
+            int(self.infoPrune * 100)) + r'\%' if not self.fSelect else str(
+            self.extent) + ', weight, iP= ' + str(
+            int(self.infoPrune * 100)) + r'\%'
       else:
         append = str(
             self.extent) if not self.fSelect else str(
-            self.extent) + '_w'
+            self.extent) + ', weight'
 
-    self.out.insert(0, self.dataName + '_' + append)
+    self.out.insert(0, self.dataName + ', ' + append)
     self.out_pred.insert(0, self.dataName)
     print(self.out)
 

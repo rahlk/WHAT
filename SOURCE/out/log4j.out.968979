@@ -1,0 +1,38 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2d2-6>
+Subject: Job 968979: <tcsh save log4j 19489> Done
+
+Job <tcsh save log4j 19489> was submitted from host <login02> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <4*n2d2-6>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Thu Apr 30 12:28:04 2015
+Results reported at Thu Apr 30 13:10:48 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save log4j 19489
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   2535.62 sec.
+    Max Memory :        92 MB
+    Max Swap   :       712 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/log4j.err.968979> for stderr output of this job.
+

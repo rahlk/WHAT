@@ -1,0 +1,39 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2d1-12>
+Subject: Job 968974: <tcsh save ivy 19443> Done
+
+Job <tcsh save ivy 19443> was submitted from host <login02> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <3*n2d1-12>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <1*n2d1-5>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Thu Apr 30 12:27:28 2015
+Results reported at Thu Apr 30 13:38:53 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save ivy 19443
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   4254.84 sec.
+    Max Memory :        95 MB
+    Max Swap   :       715 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/ivy.err.968974> for stderr output of this job.
+

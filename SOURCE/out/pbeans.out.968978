@@ -1,0 +1,40 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2d2-7>
+Subject: Job 968978: <tcsh save pbeans 28165> Done
+
+Job <tcsh save pbeans 28165> was submitted from host <login02> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <1*n2d2-7>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <1*n2d2-3>
+                            <2*n2d2-5>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Thu Apr 30 12:28:04 2015
+Results reported at Thu Apr 30 13:03:18 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save pbeans 28165
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   2085.01 sec.
+    Max Memory :        92 MB
+    Max Swap   :       712 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/pbeans.err.968978> for stderr output of this job.
+

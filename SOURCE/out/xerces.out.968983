@@ -1,0 +1,39 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c3-12>
+Subject: Job 968983: <tcsh save xerces 1268> Done
+
+Job <tcsh save xerces 1268> was submitted from host <login02> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <1*n2c3-12>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <3*n2c3-7>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Thu Apr 30 12:28:41 2015
+Results reported at Thu Apr 30 17:35:10 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save xerces 1268
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :  18345.52 sec.
+    Max Memory :       100 MB
+    Max Swap   :       720 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/xerces.err.968983> for stderr output of this job.
+

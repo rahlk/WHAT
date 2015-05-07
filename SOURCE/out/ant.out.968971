@@ -1,0 +1,40 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c1-10>
+Subject: Job 968971: <tcsh save ant 15130> Done
+
+Job <tcsh save ant 15130> was submitted from host <login02> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <2*n2c1-10>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <1*n2c1-6>
+                            <1*n2c1-3>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Thu Apr 30 12:27:14 2015
+Results reported at Thu Apr 30 16:57:31 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save ant 15130
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :  15608.76 sec.
+    Max Memory :        96 MB
+    Max Swap   :       717 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/ant.err.968971> for stderr output of this job.
+

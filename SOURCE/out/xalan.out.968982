@@ -1,0 +1,40 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2c3-1>
+Subject: Job 968982: <tcsh save xalan 24077> Done
+
+Job <tcsh save xalan 24077> was submitted from host <login02> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <1*n2c3-1>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <2*n2c3-4>
+                            <1*n2c3-8>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Thu Apr 30 12:28:26 2015
+Results reported at Thu Apr 30 23:58:17 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save xalan 24077
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :  41264.74 sec.
+    Max Memory :       103 MB
+    Max Swap   :       723 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/xalan.err.968982> for stderr output of this job.
+

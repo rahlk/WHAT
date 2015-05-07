@@ -1,0 +1,206 @@
+\documentclass{article}
+    \usepackage{colortbl}
+    \usepackage{fullpage}
+    \usepackage{booktabs}
+    \usepackage{bigstrut}
+    \usepackage[table]{xcolor}
+    \usepackage{picture}
+    \newcommand{\quart}[4]{\begin{picture}(50,6)
+    {\color{black}\put(#3,3){\circle*{4}}\put(#1,3){\line(1,0){#2}}}\end{picture}}
+    \begin{document}
+    
+\subsection*{ant}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 &     ant_Base &    0.13  &  0.03 & \quart{0}{4}{3}{148} \bigstrut\\
+\hline  2 & ant_0.25_w_iP(50%) &    0.2  &  0.05 & \quart{9}{9}{14}{148} \bigstrut\\
+\hline  3 & ant_0.5_w_iP(50%) &    0.26  &  0.06 & \quart{18}{10}{24}{148} \bigstrut\\
+\hline  4 &     ant_0.25 &    0.3  &  0.1 & \quart{23}{16}{31}{148} \bigstrut\\
+  4 &   ant_0.25_w &    0.3  &  0.08 & \quart{24}{14}{31}{148} \bigstrut\\
+\hline  5 & ant_0.75_w_iP(50%) &    0.42  &  0.13 & \quart{39}{22}{51}{148} \bigstrut\\
+  5 &      ant_0.5 &    0.43  &  0.1 & \quart{44}{17}{53}{148} \bigstrut\\
+  5 &    ant_0.5_w &    0.43  &  0.1 & \quart{46}{17}{53}{148} \bigstrut\\
+\hline  6 &   ant_0.75_w &    0.64  &  0.19 & \quart{68}{31}{88}{148} \bigstrut\\
+  6 &     ant_0.75 &    0.63  &  0.08 & \quart{79}{14}{86}{148} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{synapse}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 & synapse_Base &    0.15  &  0.0 & \quart{3}{0}{3}{135} \bigstrut\\
+  1 & synapse_0.5_w_iP(50%) &    0.15  &  0.08 & \quart{3}{12}{3}{135} \bigstrut\\
+  1 & synapse_0.25_w_iP(50%) &    0.17  &  0.08 & \quart{0}{12}{6}{135} \bigstrut\\
+\hline  2 & synapse_0.75_w_iP(50%) &    0.21  &  0.08 & \quart{3}{12}{12}{135} \bigstrut\\
+  2 & synapse_0.25 &    0.23  &  0.18 & \quart{6}{28}{15}{135} \bigstrut\\
+  2 & synapse_0.25_w &    0.23  &  0.11 & \quart{6}{17}{15}{135} \bigstrut\\
+\hline  3 & synapse_0.5_w &    0.38  &  0.19 & \quart{21}{30}{39}{135} \bigstrut\\
+  3 &  synapse_0.5 &    0.42  &  0.27 & \quart{18}{42}{45}{135} \bigstrut\\
+\hline  4 & synapse_0.75 &    0.5  &  0.39 & \quart{39}{60}{57}{135} \bigstrut\\
+  4 & synapse_0.75_w &    0.56  &  0.25 & \quart{51}{39}{67}{135} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{velocity}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 & velocity_0.25_w_iP(50%) &    0.03  &  0.06 & \quart{0}{18}{6}{299} \bigstrut\\
+  1 & velocity_0.25 &    0.04  &  0.02 & \quart{6}{6}{9}{299} \bigstrut\\
+  1 & velocity_0.25_w &    0.05  &  0.03 & \quart{9}{9}{12}{299} \bigstrut\\
+  1 & velocity_Base &    0.05  &  0.06 & \quart{0}{18}{12}{299} \bigstrut\\
+\hline  2 & velocity_0.5_w_iP(50%) &    0.07  &  0.11 & \quart{12}{33}{18}{299} \bigstrut\\
+  2 & velocity_0.5_w &    0.1  &  0.08 & \quart{18}{24}{27}{299} \bigstrut\\
+\hline  3 & velocity_0.5 &    0.13  &  0.12 & \quart{18}{36}{36}{299} \bigstrut\\
+\hline  4 & velocity_0.75 &    0.16  &  0.24 & \quart{27}{72}{45}{299} \bigstrut\\
+  4 & velocity_0.75_w_iP(50%) &    0.17  &  0.15 & \quart{30}{45}{48}{299} \bigstrut\\
+  4 & velocity_0.75_w &    0.22  &  0.22 & \quart{30}{66}{63}{299} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{poi}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 &     poi_Base &    0.1  &  0.03 & \quart{0}{6}{4}{187} \bigstrut\\
+\hline  2 & poi_0.25_w_iP(50%) &    0.14  &  0.1 & \quart{0}{20}{12}{187} \bigstrut\\
+\hline  3 &   poi_0.25_w &    0.18  &  0.14 & \quart{12}{28}{20}{187} \bigstrut\\
+  3 &     poi_0.25 &    0.19  &  0.11 & \quart{12}{22}{22}{187} \bigstrut\\
+  3 & poi_0.5_w_iP(50%) &    0.2  &  0.19 & \quart{14}{39}{24}{187} \bigstrut\\
+\hline  4 & poi_0.75_w_iP(50%) &    0.26  &  0.2 & \quart{24}{41}{36}{187} \bigstrut\\
+  4 &      poi_0.5 &    0.28  &  0.2 & \quart{20}{41}{40}{187} \bigstrut\\
+  4 &    poi_0.5_w &    0.33  &  0.22 & \quart{30}{45}{51}{187} \bigstrut\\
+\hline  5 &     poi_0.75 &    0.47  &  0.22 & \quart{55}{44}{79}{187} \bigstrut\\
+  5 &   poi_0.75_w &    0.46  &  0.11 & \quart{67}{22}{77}{187} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{log4j}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 &   log4j_Base &    0.06  &  0.03 & \quart{0}{13}{13}{421} \bigstrut\\
+\hline  2 & log4j_0.25_w &    0.09  &  0.04 & \quart{13}{17}{26}{421} \bigstrut\\
+  2 &   log4j_0.25 &    0.09  &  0.06 & \quart{13}{26}{26}{421} \bigstrut\\
+  2 & log4j_0.25_w_iP(50%) &    0.09  &  0.04 & \quart{13}{17}{26}{421} \bigstrut\\
+  2 &    log4j_0.5 &    0.1  &  0.07 & \quart{13}{30}{30}{421} \bigstrut\\
+\hline  3 &  log4j_0.5_w &    0.12  &  0.03 & \quart{30}{13}{39}{421} \bigstrut\\
+\hline  4 & log4j_0.75_w &    0.13  &  0.11 & \quart{30}{48}{43}{421} \bigstrut\\
+  4 &   log4j_0.75 &    0.13  &  0.06 & \quart{39}{26}{43}{421} \bigstrut\\
+  4 & log4j_0.5_w_iP(50%) &    0.13  &  0.06 & \quart{30}{26}{43}{421} \bigstrut\\
+\hline  5 & log4j_0.75_w_iP(50%) &    0.19  &  0.11 & \quart{52}{47}{69}{421} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{xalan}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 &   xalan_Base &    0.08  &  0.02 & \quart{0}{5}{2}{244} \bigstrut\\
+\hline  2 & xalan_0.5_w_iP(50%) &    0.14  &  0.05 & \quart{10}{13}{18}{244} \bigstrut\\
+  2 & xalan_0.75_w_iP(50%) &    0.15  &  0.06 & \quart{15}{16}{21}{244} \bigstrut\\
+  2 & xalan_0.25_w_iP(50%) &    0.15  &  0.06 & \quart{10}{16}{21}{244} \bigstrut\\
+\hline  3 &   xalan_0.25 &    0.23  &  0.11 & \quart{26}{29}{42}{244} \bigstrut\\
+  3 & xalan_0.25_w &    0.23  &  0.09 & \quart{31}{24}{42}{244} \bigstrut\\
+\hline  4 &  xalan_0.5_w &    0.28  &  0.06 & \quart{49}{16}{55}{244} \bigstrut\\
+\hline  5 &    xalan_0.5 &    0.3  &  0.13 & \quart{47}{34}{60}{244} \bigstrut\\
+  5 & xalan_0.75_w &    0.34  &  0.19 & \quart{49}{50}{71}{244} \bigstrut\\
+  5 &   xalan_0.75 &    0.38  &  0.11 & \quart{65}{29}{81}{244} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{pbeans}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 &  pbeans_Base &    0.0  &  0.0 & \quart{0}{0}{0}{199} \bigstrut\\
+  1 &  pbeans_0.25 &    0.0  &  0.0 & \quart{0}{0}{0}{199} \bigstrut\\
+  1 &   pbeans_0.5 &    0.0  &  0.0 & \quart{0}{0}{0}{199} \bigstrut\\
+  1 &  pbeans_0.75 &    0.0  &  0.5 & \quart{0}{99}{0}{199} \bigstrut\\
+  1 & pbeans_0.25_w &    0.0  &  0.0 & \quart{0}{0}{0}{199} \bigstrut\\
+  1 & pbeans_0.5_w &    0.0  &  0.0 & \quart{0}{0}{0}{199} \bigstrut\\
+  1 & pbeans_0.75_w &    0.0  &  0.5 & \quart{0}{99}{0}{199} \bigstrut\\
+  1 & pbeans_0.25_w_iP(50%) &    0.0  &  0.0 & \quart{0}{0}{0}{199} \bigstrut\\
+  1 & pbeans_0.5_w_iP(50%) &    0.0  &  0.0 & \quart{0}{0}{0}{199} \bigstrut\\
+  1 & pbeans_0.75_w_iP(50%) &    0.0  &  0.0 & \quart{0}{0}{0}{199} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{lucene}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 &  lucene_0.25 &    0.05  &  0.02 & \quart{5}{12}{11}{570} \bigstrut\\
+  1 & lucene_0.25_w &    0.05  &  0.04 & \quart{0}{23}{11}{570} \bigstrut\\
+\hline  2 &   lucene_0.5 &    0.07  &  0.04 & \quart{11}{24}{23}{570} \bigstrut\\
+  2 & lucene_0.25_w_iP(50%) &    0.07  &  0.04 & \quart{11}{24}{23}{570} \bigstrut\\
+  2 & lucene_0.5_w &    0.08  &  0.05 & \quart{17}{30}{29}{570} \bigstrut\\
+\hline  3 & lucene_0.5_w_iP(50%) &    0.1  &  0.03 & \quart{29}{18}{41}{570} \bigstrut\\
+  3 &  lucene_Base &    0.1  &  0.03 & \quart{23}{18}{41}{570} \bigstrut\\
+\hline  4 & lucene_0.75_w_iP(50%) &    0.13  &  0.09 & \quart{29}{53}{58}{570} \bigstrut\\
+  4 &  lucene_0.75 &    0.15  &  0.08 & \quart{41}{47}{70}{570} \bigstrut\\
+  4 & lucene_0.75_w &    0.15  &  0.11 & \quart{35}{64}{70}{570} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{camel}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 &   camel_Base &    0.15  &  0.05 & \quart{0}{13}{5}{228} \bigstrut\\
+\hline  2 &   camel_0.25 &    0.18  &  0.06 & \quart{5}{16}{13}{228} \bigstrut\\
+  2 & camel_0.25_w &    0.2  &  0.06 & \quart{7}{16}{18}{228} \bigstrut\\
+  2 & camel_0.25_w_iP(50%) &    0.2  &  0.04 & \quart{13}{10}{18}{228} \bigstrut\\
+\hline  3 &  camel_0.5_w &    0.25  &  0.1 & \quart{21}{26}{31}{228} \bigstrut\\
+  3 &    camel_0.5 &    0.26  &  0.12 & \quart{21}{31}{34}{228} \bigstrut\\
+  3 & camel_0.5_w_iP(50%) &    0.28  &  0.11 & \quart{31}{29}{39}{228} \bigstrut\\
+\hline  4 & camel_0.75_w &    0.39  &  0.16 & \quart{57}{42}{68}{228} \bigstrut\\
+  4 &   camel_0.75 &    0.42  &  0.17 & \quart{47}{45}{76}{228} \bigstrut\\
+  4 & camel_0.75_w_iP(50%) &    0.42  &  0.1 & \quart{63}{26}{76}{228} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{ivy}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 & ivy_0.25_w_iP(50%) &    0.15  &  0.04 & \quart{0}{7}{1}{168} \bigstrut\\
+\hline  2 &     ivy_Base &    0.16  &  0.0 & \quart{3}{0}{3}{168} \bigstrut\\
+  2 &     ivy_0.25 &    0.18  &  0.06 & \quart{3}{12}{7}{168} \bigstrut\\
+  2 &   ivy_0.25_w &    0.2  &  0.06 & \quart{3}{12}{11}{168} \bigstrut\\
+\hline  3 & ivy_0.5_w_iP(50%) &    0.28  &  0.08 & \quart{21}{16}{27}{168} \bigstrut\\
+\hline  4 &      ivy_0.5 &    0.33  &  0.11 & \quart{25}{22}{37}{168} \bigstrut\\
+  4 &    ivy_0.5_w &    0.37  &  0.09 & \quart{33}{17}{45}{168} \bigstrut\\
+\hline  5 & ivy_0.75_w_iP(50%) &    0.38  &  0.16 & \quart{37}{31}{47}{168} \bigstrut\\
+\hline  6 &   ivy_0.75_w &    0.56  &  0.08 & \quart{76}{16}{82}{168} \bigstrut\\
+  6 &     ivy_0.75 &    0.57  &  0.12 & \quart{76}{23}{84}{168} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{jedit}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 &   jedit_Base &    0.06  &  0.01 & \quart{0}{2}{0}{195} \bigstrut\\
+\hline  2 & jedit_0.25_w &    0.08  &  0.06 & \quart{0}{12}{4}{195} \bigstrut\\
+  2 &   jedit_0.25 &    0.09  &  0.05 & \quart{0}{10}{6}{195} \bigstrut\\
+\hline  3 & jedit_0.25_w_iP(50%) &    0.12  &  0.08 & \quart{4}{16}{12}{195} \bigstrut\\
+\hline  4 &  jedit_0.5_w &    0.16  &  0.09 & \quart{12}{19}{20}{195} \bigstrut\\
+  4 &    jedit_0.5 &    0.17  &  0.09 & \quart{12}{19}{22}{195} \bigstrut\\
+\hline  5 & jedit_0.5_w_iP(50%) &    0.22  &  0.11 & \quart{27}{22}{33}{195} \bigstrut\\
+  5 & jedit_0.75_w &    0.26  &  0.18 & \quart{29}{37}{41}{195} \bigstrut\\
+\hline  6 &   jedit_0.75 &    0.38  &  0.31 & \quart{35}{64}{66}{195} \bigstrut\\
+  6 & jedit_0.75_w_iP(50%) &    0.41  &  0.17 & \quart{54}{35}{72}{195} \bigstrut\\
+\hline \end{tabulary}}
+\subsection*{xerces}
+
+{\tiny \begin{tabulary}{\linewidth}{|J|J|J|J|J|}
+\hline
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \bigstrut\\\hline
+  1 &  xerces_Base &    0.09  &  0.04 & \quart{0}{9}{4}{226} \bigstrut\\
+\hline  2 & xerces_0.25_w_iP(50%) &    0.12  &  0.06 & \quart{4}{15}{12}{226} \bigstrut\\
+  2 & xerces_0.5_w_iP(50%) &    0.13  &  0.09 & \quart{7}{22}{14}{226} \bigstrut\\
+\hline  3 &  xerces_0.25 &    0.16  &  0.15 & \quart{9}{37}{21}{226} \bigstrut\\
+  3 & xerces_0.25_w &    0.19  &  0.12 & \quart{12}{29}{29}{226} \bigstrut\\
+\hline  4 & xerces_0.5_w &    0.22  &  0.1 & \quart{24}{24}{36}{226} \bigstrut\\
+  4 & xerces_0.75_w_iP(50%) &    0.23  &  0.14 & \quart{24}{34}{39}{226} \bigstrut\\
+  4 &   xerces_0.5 &    0.26  &  0.1 & \quart{34}{24}{46}{226} \bigstrut\\
+\hline  5 & xerces_0.75_w &    0.36  &  0.16 & \quart{60}{39}{70}{226} \bigstrut\\
+  5 &  xerces_0.75 &    0.43  &  0.15 & \quart{58}{37}{87}{226} \bigstrut\\
+\hline \end{tabulary}}
+
+    \end{document}
+    
