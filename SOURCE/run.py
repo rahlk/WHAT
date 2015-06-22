@@ -149,7 +149,7 @@ class run():
     self.out_pred.insert(0, self.dataName)
     print(self.out)
 
-  def deltas(self):
+  def deltas(self, whatnow='deltas'):
 
     predRows = []
     delta = []
@@ -160,6 +160,7 @@ class run():
                        tunings=self.tunedParams,
                        smoteit=True)
 
+    allRows = [r.cells[:-2] for r in train_DF._rows + test_df._rows]
     for predicted, row in zip(before, test_df._rows):
       tmp = row.cells
       tmp[-2] = predicted
@@ -189,38 +190,17 @@ class run():
           Prune=self.Prune).deltas()
 
     def min_max():
-      N = len(predRows[0])
+      N = len(allRows[0])
       base = lambda X: sorted(X)[-1] - sorted(X)[0]
-      return [base([r[i] for r in predRows]) for i in xrange(N - 1)]
+      return [base([r[i] for r in allRows]) for i in xrange(N)]
 
     for newRow in newTab:
-      delta.append((np.array(newRow) / np.array(min_max()[:-1])))
+      delta.append((np.array(newRow) / np.array(min_max())))
 
-    return delta
-
-
-#     aft = [r.cells for r in newTab._rows]
-#     set_trace()
-#     self.out_pred.append(_Abcd(before=actual, after=before))
-# delta = cliffs(lst2=Bugs(predTest), lst1=after).delta()
-#     self.out.append(delta)
-#     if self.extent == 0:
-#       append = 'Baseline'
-#     else:
-#       if self.Prune:
-#         append = str(
-#             self.extent) + ', iP= ' + str(
-#             int(self.infoPrune * 100)) + r'\%' if not self.fSelect else str(
-#             self.extent) + ', weight, iP= ' + str(
-#             int(self.infoPrune * 100)) + r'\%'
-#       else:
-#         append = str(
-#             self.extent) if not self.fSelect else str(
-#             self.extent) + ', weight'
-#
-#     self.out.insert(0, self.dataName + ', ' + append)
-#     self.out_pred.insert(0, self.dataName)
-#     print(self.out)
+    if whatnow == 'deltas':
+      return delta
+    if whatnow == 'minmax':
+      return allRows
 
 
 def _test(file):
@@ -314,26 +294,51 @@ def _test(file):
       Prune=True,
       infoPrune=0.5).go()
 
-if __name__ == '__main__':
 
-  delta = []
+def deltaCSVwriter():
   for name in ['ant', 'ivy', 'jedit', 'lucene', 'poi']:
-    delta.extend(run(
+    delta = run(
         dataName=name,
         extent=0.75,
         reps=24,
         fSelect=True,
         Prune=False,
-        infoPrune=0.5).deltas())
+        infoPrune=0.5).deltas()
 
-  y = np.median(delta, axis=0)
-  yhi, ylo = np.percentile(delta, q=[90, 10], axis=0)
-  dat1 = sorted([(h.name[1:], a, b, c) for h, a, b, c in zip(
-      run().headers[:-2], y, ylo, yhi)], key=lambda F: F[1])
-  dat = np.asarray([(d[0], n, d[1], d[2], d[3])
-                    for d, n in zip(dat1, range(1, 21))])
-  with open('/Users/rkrsn/git/GNU-Plots/rkrsn/errorbar/delta.csv', 'w') as csvfile:
+    y = np.median(delta, axis=0)
+    yhi, ylo = np.percentile(delta, q=[90, 10], axis=0)
+    dat1 = sorted([(h.name[1:], a, b, c) for h, a, b, c in zip(
+        run().headers[:-2], y, ylo, yhi)], key=lambda F: F[1])
+    dat = np.asarray([(d[0], n, d[1], d[2], d[3])
+                      for d, n in zip(dat1, range(1, 21))])
+    with open('/Users/rkrsn/git/GNU-Plots/rkrsn/errorbar/%s.csv' % (name), 'w') as csvfile:
+      writer = csv.writer(csvfile, delimiter=' ')
+      for el in dat[()]:
+        writer.writerow(el)
+
+
+def minmaxCSVwriter():
+  minMax = []
+  for name in ['ant', 'ivy', 'jedit', 'lucene', 'poi']:
+    minMax.extend(run(
+        dataName=name,
+        extent=0.75,
+        reps=24,
+        fSelect=True,
+        Prune=False,
+        infoPrune=0.5).deltas(whatnow='minmax'))
+  dat = np.asarray([(h.name[1:],
+                     min([r[i] for r in minMax]),
+                     max([r[i] for r in minMax])) for i,
+                    h in enumerate(run().headers[:-2])])
+  with open('/Users/rkrsn/git/WHAT/SOURCE/minmax/%s.csv' % ('minmax'), 'w') as csvfile:
     writer = csv.writer(csvfile, delimiter=' ')
+    writer.writerow(['Attr', 'Min', 'Max'])
     for el in dat[()]:
       writer.writerow(el)
+
+
+if __name__ == '__main__':
+  deltaCSVwriter()
+#   minmaxCSVwriter()
 #   eval(cmd())

@@ -207,8 +207,8 @@ class treatments():
                   :-2]),
           reverse=True)[0]
       [good, bad] = sorted(vertices, key=lambda F: F.score())
-      A.append(abs(np.array(self.mutate(rows.cells, good)) -
-                   np.array(rows.cells[:-2])).tolist())
+      A.append((np.array(self.mutate(rows.cells, good)) -
+                np.array(rows.cells[:-2])).tolist())
 
     return A
 
