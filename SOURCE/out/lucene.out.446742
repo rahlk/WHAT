@@ -1,0 +1,39 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2d1-7>
+Subject: Job 446742: <tcsh save lucene 8349> Done
+
+Job <tcsh save lucene 8349> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <1*n2d1-7>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <3*n2d1-2>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Sun Apr  5 19:45:57 2015
+Results reported at Sun Apr  5 21:24:04 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save lucene 8349
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   5845.56 sec.
+    Max Memory :        95 MB
+    Max Swap   :       715 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/lucene.err.446742> for stderr output of this job.
+

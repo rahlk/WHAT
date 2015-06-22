@@ -5,6 +5,7 @@ from os import environ, getcwd
 from os import walk
 from pdb import set_trace
 import sys
+from bdb import set_trace
 
 # Update PYTHONPATH
 HOME = environ['HOME']
@@ -27,6 +28,7 @@ from methods1 import *
 from sk import rdivDemo
 import numpy as np
 import pandas as pd
+import csv
 
 
 class run():
@@ -37,11 +39,10 @@ class run():
           _smoteit=True,
           _n=-1,
           _tuneit=False,
-
-          dataName=None,
+          dataName='ant',
           reps=1,
-          extent=0.5,
-          fSelect=False,
+          extent=0.75,
+          fSelect=True,
           Prune=False,
           infoPrune=0.75):
     self.pred = pred
@@ -57,6 +58,11 @@ class run():
     self._n = _n
     self.tunedParams = None if not _tuneit else tuner(
         self.pred, self.train[_n])
+    self.headers = createTbl(
+        self.train[
+            self._n],
+        isBin=True,
+        bugThres=1).headers
 
   def categorize(self):
     dir = '../Data'
@@ -75,12 +81,8 @@ class run():
           return indx
 
     return [
-        dat[0] for dat in withinClass(
-            data[
-                whereis()])], [
-        dat[1] for dat in withinClass(
-            data[
-                whereis()])]  # Train, Test
+        dat[0] for dat in withinClass(data[whereis()])], [
+        dat[1] for dat in withinClass(data[whereis()])]  # Train, Test
 
   def go(self):
 
@@ -113,7 +115,7 @@ class run():
       else:
         newTab = treatments2(
             train=self.train[
-              self._n],
+                self._n],
             test=self.test[
                 self._n],
             far=False,
@@ -146,6 +148,79 @@ class run():
     self.out.insert(0, self.dataName + ', ' + append)
     self.out_pred.insert(0, self.dataName)
     print(self.out)
+
+  def deltas(self):
+
+    predRows = []
+    delta = []
+    train_DF = createTbl(self.train[self._n], isBin=True, bugThres=1)
+    test_df = createTbl(self.test[self._n], isBin=True, bugThres=1)
+    actual = Bugs(test_df)
+    before = self.pred(train_DF, test_df,
+                       tunings=self.tunedParams,
+                       smoteit=True)
+
+    for predicted, row in zip(before, test_df._rows):
+      tmp = row.cells
+      tmp[-2] = predicted
+      if predicted > 0:
+        predRows.append(tmp)
+
+    predTest = clone(test_df, rows=predRows)
+
+    if predRows:
+      newTab = treatments2(
+          train=self.train[self._n],
+          test=self.test[self._n],
+          test_df=predTest,
+          extent=self.extent,
+          far=False,
+          infoPrune=self.infoPrune,
+          Prune=self.Prune).deltas()
+    else:
+      newTab = treatments2(
+          train=self.train[
+              self._n],
+          test=self.test[
+              self._n],
+          far=False,
+          extent=self.extent,
+          infoPrune=self.infoPrune,
+          Prune=self.Prune).deltas()
+
+    def min_max():
+      N = len(predRows[0])
+      base = lambda X: sorted(X)[-1] - sorted(X)[0]
+      return [base([r[i] for r in predRows]) for i in xrange(N - 1)]
+
+    for newRow in newTab:
+      delta.append((np.array(newRow) / np.array(min_max()[:-1])))
+
+    return delta
+
+
+#     aft = [r.cells for r in newTab._rows]
+#     set_trace()
+#     self.out_pred.append(_Abcd(before=actual, after=before))
+# delta = cliffs(lst2=Bugs(predTest), lst1=after).delta()
+#     self.out.append(delta)
+#     if self.extent == 0:
+#       append = 'Baseline'
+#     else:
+#       if self.Prune:
+#         append = str(
+#             self.extent) + ', iP= ' + str(
+#             int(self.infoPrune * 100)) + r'\%' if not self.fSelect else str(
+#             self.extent) + ', weight, iP= ' + str(
+#             int(self.infoPrune * 100)) + r'\%'
+#       else:
+#         append = str(
+#             self.extent) if not self.fSelect else str(
+#             self.extent) + ', weight'
+#
+#     self.out.insert(0, self.dataName + ', ' + append)
+#     self.out_pred.insert(0, self.dataName)
+#     print(self.out)
 
 
 def _test(file):
@@ -240,4 +315,25 @@ def _test(file):
       infoPrune=0.5).go()
 
 if __name__ == '__main__':
-  eval(cmd())
+
+  delta = []
+  for name in ['ant', 'ivy', 'jedit', 'lucene', 'poi']:
+    delta.extend(run(
+        dataName=name,
+        extent=0.75,
+        reps=24,
+        fSelect=True,
+        Prune=False,
+        infoPrune=0.5).deltas())
+
+  y = np.median(delta, axis=0)
+  yhi, ylo = np.percentile(delta, q=[90, 10], axis=0)
+  dat1 = sorted([(h.name[1:], a, b, c) for h, a, b, c in zip(
+      run().headers[:-2], y, ylo, yhi)], key=lambda F: F[1])
+  dat = np.asarray([(d[0], n, d[1], d[2], d[3])
+                    for d, n in zip(dat1, range(1, 21))])
+  with open('/Users/rkrsn/git/GNU-Plots/rkrsn/errorbar/delta.csv', 'w') as csvfile:
+    writer = csv.writer(csvfile, delimiter=' ')
+    for el in dat[()]:
+      writer.writerow(el)
+#   eval(cmd())

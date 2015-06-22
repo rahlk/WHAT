@@ -1,0 +1,39 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n2d1-6>
+Subject: Job 446743: <tcsh save pbeans 21813> Done
+
+Job <tcsh save pbeans 21813> was submitted from host <login05> by user <rkrish11> in cluster <henry2>.
+Job was executed on host(s) <3*n2d1-6>, in queue <long>, as user <rkrish11> in cluster <henry2>.
+                            <1*n2d1-5>
+</home/rkrish11> was used as the home directory.
+</home/rkrish11/git/WHAT/SOURCE> was used as the working directory.
+Started at Sun Apr  5 19:45:57 2015
+Results reported at Sun Apr  5 20:21:20 2015
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+tcsh save pbeans 21813
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   2082.08 sec.
+    Max Memory :        92 MB
+    Max Swap   :       712 MB
+
+    Max Processes  :         4
+    Max Threads    :         5
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err/pbeans.err.446743> for stderr output of this job.
+

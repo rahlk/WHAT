@@ -166,6 +166,7 @@ class treatments():
   def main(self):
     hyperPlanes = self.getHyperplanes()
     opt.f = self.fWeight()
+    A = []
     for rows in self.test_df._rows:
       newRow = rows
 #       if rows.cells[-2] > 0:
@@ -178,17 +179,44 @@ class treatments():
                   :-2]),
           reverse=True)[0]
       [good, bad] = sorted(vertices, key=lambda F: F.score())
+      try:
+        A.append(abs(np.array(self.mutate(rows.cells, good)) -
+                     np.array(rows.cells[:-2])).tolist())
+      except:
+        set_trace()
+
       newRow.cells[:-2] = self.mutate(rows.cells, good)
       self.new_Tab.append(newRow)
-
+    set_trace()
     return clone(
         self.test_df, rows=[r.cells for r in self.new_Tab], discrete=True)
+
+  def deltas(self):
+    hyperPlanes = self.getHyperplanes()
+    opt.f = self.fWeight()
+    A = []
+    for rows in self.test_df._rows:
+      newRow = rows
+#       if rows.cells[-2] > 0:
+      vertices = sorted(
+          hyperPlanes,
+          key=lambda F: self.projection(
+              F[0],
+              F[1],
+              rows.cells[
+                  :-2]),
+          reverse=True)[0]
+      [good, bad] = sorted(vertices, key=lambda F: F.score())
+      A.append(abs(np.array(self.mutate(rows.cells, good)) -
+                   np.array(rows.cells[:-2])).tolist())
+
+    return A
 
 
 def testPlanner2():
   dir = '../Data'
   one, two = explore(dir)
-  fWeight = treatments(one[0], two[0]).fWeight(criterion='Variance')
+  fWeight = treatments(one[0], two[0]).main()
   set_trace()
 
 if __name__ == '__main__':
